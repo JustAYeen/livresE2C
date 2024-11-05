@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "custom";
+    src: url('./Fried_Nuget.otf');
+}
+
+body {
+    color:#6c4747;
+    font-size: 1.8rem;
+    font-family: 'custom', sans-serif;
+    background-color: #ffebcd;
+    /*background-image: url('../asset/cielFond.jpg');*/
+}
+
+header {
+    color: #ffebcd;
+    background-color: #6c4747;
+}
