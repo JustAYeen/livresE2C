@@ -38,12 +38,14 @@ nav {
     justify-content: space-evenly;
     align-items: center;
     position: fixed;
+    left: calc(-20vw - 1vh);
     top: 22vh;
     width: 20vw;
     height: 77vh;
     background-color: #6c4747;
     margin-left: 1vh;
     z-index: 5;
+    transition: left 1s;
 }
 
 main {
@@ -127,4 +129,33 @@ ul {
     color: #ffebcd;
     border: #ffebcd 2px solid;
 
+}
+
+#trigger {
+    position: fixed;
+    top: 22vh;
+    width: 7vh;
+    aspect-ratio: 4/3;
+    background-color: #6c4747;
+    border: solid 2px #000000;
+    border-radius: 0 10px 10px 0;
+    background-image: url('../asset/menu.webp');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: left 1s;
+}
+
+#close {
+    display : none;
+    position: relative;
+    top : 2vh;
+    right : 2vh;
+    width: 5vh;
+    aspect-ratio: 1;
+    background-color: #6c4747;
+    border: solid 2px #000000;
+    border-radius: 0 10px 10px 0;
+    background-image: url(../asset/croix.png);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
