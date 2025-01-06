@@ -1,25 +1,51 @@
+<?php 
+    $title = "Silence on Lit à l'E2C";
+    $subtitle = "Lire c'est bien";
+    $isLogged = false;
+
+    $navButtons = [
+        [
+            "label" => "Accueil",
+            "path" => "../controller/homeController.php"
+        ],
+        [
+            "label" => "Bibliothèque",
+            "path" => "../controller/libraryController.php"
+        ],
+        [
+            "label" => "Espace détente",
+            "path" => "../controller/gameController.php"
+        ],
+        [
+            "label" => "Qui sommes nous",
+            "path" => "../controller/usController.php"
+        ],
+    ];
+
+    if ($isLogged) {
+        $navButtons[]= [
+            "label" => "Mon compte",
+            "path" => "../controller/accountController.php"
+            ];
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silence On Lit</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <script type="module" src="../script/nav.js"></script>
 </head>
 <body>
-    <header>
-        <img src="./asset/logo.png" alt="logo E2C" id="logo">
-        <div id="titres">
-            <h1>Silence on lit à l'E2C</h1>
-            <h2>Explorez votre imaginaire</h2>
-        </div>
-    </header>
-    <nav>
-        <a href="./index.htm" class="bouton">Accueil</a>
-        <a href="./page/library.htm" class="bouton">Bibliothèque</a>
-        <a href="./page/game.htm" class="bouton">Espace détente</a>
-        <a href="./page/us.htm" class="bouton">Qui sommes-nous</a>
-    </nav>
+    
+    <?php
+        require_once("../module/_header.php");
+        require_once("../module/_nav.php");
+    ?>
+   
     <main>
         <article>
             <p>Mettre en place le dispositif Silence, on lit ! au sein de <a href="http://e2c-grandlille.fr/" target="_blank">l’E2C (École de la 2ᵉ Chance)</a> à Lille présente de nombreux intérêts, en particulier pour les jeunes de 16 à 25 ans qui y suivent leur parcours de formation. Cette initiative, déjà bien intégrée dans de nombreuses écoles en France, consiste à consacrer 15 minutes chaque jour à la lecture silencieuse. Voici pourquoi elle pourrait avoir un impact positif au sein de l’E2C :</p>
@@ -57,10 +83,10 @@
 
                 <li><strong>Culture générale et ouverture d’esprit </strong>: En découvrant des livres variés, les jeunes peuvent élargir leurs horizons et développer leur culture générale, un atout important pour trouver sa place dans le monde du travail et s’adapter aux différentes situations. Dans un centre comme l’E2C, où l’objectif est de guider les jeunes vers un avenir professionnel, cette ouverture d’esprit est précieuse.</li>
             </ul>
-            0
             <p>En intégrant Silence, on lit ! dans les pratiques de l’E2C de Lille, on contribue à faire de la lecture une habitude positive et régulière pour les jeunes, les aidant à s’épanouir personnellement et professionnellement. </p>
             
         </article>
     </main>
+    <div id="trigger"></div>
 </body>
 </html>

@@ -1,3 +1,27 @@
+<?php 
+    $title = "Des jeux";
+    $subtitle = "Pour se muscler l'esprit";
+
+    $navButtons = [
+        [
+            "label" => "Accueil",
+            "path" => "../controller/homeController.php"
+        ],
+        [
+            "label" => "Bibliothèque",
+            "path" => "../controller/libraryController.php"
+        ],
+        [
+            "label" => "Espace détente",
+            "path" => "../controller/gameController.php"
+        ],
+        [
+            "label" => "Qui sommes nous",
+            "path" => "../controller/usController.php"
+        ],
+    ];
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -17,13 +41,10 @@
         </div>
     </header>
 
-    <nav>
-        <div id="close"></div>
-        <a href="../index.htm" class="bouton">Accueil</a>
-        <a href="../page/library.htm" class="bouton">Bibliothèque</a>
-        <a href="../page/game.htm" class="bouton">Espace détente</a>
-        <a href="../page/us.htm" class="bouton">Qui sommes-nous</a>
-    </nav>
+    <?php
+        require_once("../module/_header.php");
+        require_once("../module/_nav.php");
+    ?>
 
     <main>
         <p id="result"></p>
