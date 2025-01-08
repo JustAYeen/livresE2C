@@ -202,3 +202,11 @@ ul {
 .loggin-bouton:hover {
     background-color: #ffebcd;
 }
+
+.message {
+    width: 100%;
+    text-align: center;
+    font-family: custom;
+    font-size: 1.5rem;
+    color: #fc0000;
+}

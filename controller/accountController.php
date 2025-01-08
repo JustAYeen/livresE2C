@@ -1,7 +1,11 @@
 <?php
+session_start();
 
-$isLogged = false;
-if($isLogged) {
+
+if (!isset($_SESSION['id'])) {
+    header('location: ../controller/homeController.php');
+}
+
 $title = "Mon compte";
 $subtitle = "Mes infos";
 
@@ -31,6 +35,4 @@ $subtitle = "Mes infos";
 
 
 require_once("../view/accountView.php");
-} else {
-    header("location: ../controller/homeController.php");
-}
+
