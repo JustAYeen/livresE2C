@@ -22,4 +22,13 @@ class Model {
 
         return $req;
     }
+
+    public function getALLBooks () {
+        $sqlQuery = "SELECT titre, auteur, genre, date, id FROM livres_vw";
+        $statement = $this->bdd->prepare($sqlQuery);
+        $statement->execute();
+        $req = $statement->fetchAll();
+
+        return $req;
+    }
 }

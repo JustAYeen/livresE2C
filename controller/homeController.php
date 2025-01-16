@@ -23,7 +23,7 @@
         ],
     ];
 
-    if ($_SESSION["id"]) {
+    if (isset ($_SESSION["id"])) {
         $navButtons[]= [
             "label" => "Mon compte",
             "path" => "../controller/accountController.php"
